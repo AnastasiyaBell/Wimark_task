@@ -31,7 +31,7 @@ func main(){
         if err == io.EOF{
             break
         }
-        paper_in1 = strings.Split(string(data1[:n1]), "\n")
+        paper_in1 = append(paper_in1, strings.Split(string(data1[:n1]), "\n")...)
     }
     for j := 0; j < len(paper_in1); j++{
         paper_in = append(paper_in, strings.Split(paper_in1[j], " ")...)
@@ -74,7 +74,7 @@ func main(){
         if err == io.EOF{
             break
         }
-        piece_in1 = strings.Split(string(data2[:n2]), "\n")
+        piece_in1 = append(piece_in1, strings.Split(string(data2[:n2]), "\n")...)
         //fmt.Println(piece_in1)
         //fmt.Println(len(piece_in1))
     }
